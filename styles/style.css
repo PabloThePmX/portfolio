@@ -10,6 +10,12 @@
     }
 }
 
+@keyframes bgscroll {
+    100% {
+      background-position: 0% 100%;
+    }
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -43,6 +49,16 @@ body{
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+.main-header-crt {
+    background-image: linear-gradient(
+      rgba(17, 20, 53, 0.1),
+      rgba(118, 255, 241, 0.1)
+    );
+    background-repeat: repeat;
+    background-size: 100vw 10vh;
+    animation: bgscroll 10s linear infinite;
+  }
 
 .top-header{
     width: 100%;
