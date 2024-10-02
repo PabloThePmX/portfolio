@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pablo Sarturi</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/logo-portfolio.png">
 </head>
-
 <body>
     <header>
         <nav class="top-header">
             <ul class="menu-list">
                 <li class="menu-item"><a href="#about-me">About Me</a></li>
                 <li class="menu-item"><a href="#exp">Experiences</a></li>
-                <li class="menu-item"><a href="">Teste</a></li>
-                <li class="menu-item"><a href="">Teste</a></li>
+                <li class="menu-item"><a href="#academics">Academics</a></li>
+                <li class="menu-item"><a href="">Projects</a></li>
+                <li class="menu-item"><a href="">Contact Me</a></li>
             </ul>
         </div>
         <div class="main-header">
@@ -25,7 +26,8 @@
             </div>
         </div>
     </header>
-    <section class="card-me" id="about-me">
+    <section id="about-me" class="section-container">
+        <h1 class="section-title">About Me</h1>
         <div class="win95-box">
             <section class="win95-bar">
                 <div>
@@ -42,7 +44,7 @@
                     <img src="assets/me.jpg" alt="A picture of myself">
                     <figcaption>Yup, that's me (circa 2019)</figcaption>
                 </figure>
-                <span class="win95-text">
+                <span class="win95-text" style="padding-left: 0px;">
                     <h2>Who am I?</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ex corporis dicta ducimus dolore. Quia temporibus reprehenderit laudantium illum rerum cum inventore, atque fugit ipsum dolore doloribus dignissimos, odit velit.
                     </p>
@@ -50,9 +52,76 @@
             </section>
         </div>
     </section>
-    <section id="exp">
-        <h1>Teste</h1>
+    <section id="exp" class="section-container">
+        <h1 class="section-title">Experiences</h1>
+        <div class="win95-box">
+            <section class="win95-bar">
+                <div>
+                    <!-- <img src="assets/icon-mycomputer.png"> -->
+                    <p class="win95-title">Experiences</p>
+                </div>
+                <div>
+                    <button class="win95-btn">_</button>
+                    <button class="win95-btn">X</button>
+                </div>
+            </section>
+            <section class="experience">
+                <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                <span class="pipe">|</span>
+                <span class="experience-text">
+                    <h2>Lógica Informática</h2>
+                    <h3>2020 - Now</h3>
+                </span>
+            </section>
+            <section class="win95-text">
+                <p>During my day-to-day work, I contribute to various projects that support the ERP system:</p>
+
+                <ul>
+                    <li>
+                        <strong>CAD Plugin:</strong> I develop new functionalities, fix bugs, and refactor some routines in a plugin that exports CAD tool structures to the ERP.
+                        <br>
+                        - Developed using C# with WPF, Entity Framework, and PostgreSQL.
+                    </li>
+
+                    <br>
+
+                    <li>
+                        <strong>Reporting Software:</strong> I restructured the software used for viewing and assembling ERP reports. Currently, I handle all activities related to this tool. One of my main tasks was to adapt the software to run on a separate thread and exclusively in 64-bit, significantly improving performance when dealing with large images.
+                        <br>
+                        - Developed using C# and WPF.
+                    </li>
+
+                    <br>
+
+                    <li>
+                        <strong>AI Chat:</strong> I contributed to the final stages of implementing a generative AI-based chatbot that integrates information from Lógica’s softwares. I was also responsible for transforming this application into an API, enabling its integration with Ez Chat.
+                        <br>
+                        - Developed using GeneXus, WorkWithPlus, and PostgreSQL.
+                    </li>
+
+                    <br>
+
+                    <li>
+                        <strong>ERP DLLs:</strong> I develop and maintain various DLLs in C# for use within the company's ERP system.
+                    </li>
+                </ul>
+
+            </section>
+        </div>
+        
     </section>
+    <section id="academics" class="section-container">
+        <h1 class="section-title">Teste</h1>
+    </section>
+    <section id="projects" class="section-container">
+        <h1 class="section-title">Teste</h1>
+    </section>
+    <section id="contact" class="section-container">
+        <h1 class="section-title">Teste</h1>
+    </section>
+    <footer>
+
+    </footer>
     <script src="scripts/script.js"></script>
 </body>
 

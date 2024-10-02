@@ -1,5 +1,5 @@
 let speed = 70;
-let txt = `Hey! I'm Pablo, a backend dev focuses manly in C#`;
+let txt = `Hey! I'm Pablo!`;
 let i = 0;
 
 function typeWriter() {
