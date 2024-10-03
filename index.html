@@ -8,115 +8,264 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="assets/logo-portfolio.png">
 </head>
+
 <body>
-    <header>
+    <header id="header">
         <nav class="top-header">
-            <ul class="menu-list">
+            <a href="#about-me">About Me</a>
+            <a href="#story">My Story</a>
+            <a href="">Projects</a>
+            <!-- <ul class="menu-list">
                 <li class="menu-item"><a href="#about-me">About Me</a></li>
                 <li class="menu-item"><a href="#story">My Story</a></li>
-                <li class="menu-item"><a href="#academics">Academics</a></li>
                 <li class="menu-item"><a href="">Projects</a></li>
-                <li class="menu-item"><a href="">Contact Me</a></li>
-            </ul>
-        </div>
+            </ul> -->
+        </nav>
         <div class="main-header">
             <div class="intro-text">
                 <!-- Injected via JS -->
                 <h2 id="typing-intro"></h2>
+                <section class="icons">
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="https://github.com/PabloThePmX" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a></li>
+                        <li class="menu-item"><a href="https://www.linkedin.com/in/pablo-sarturi/?locale=en_US"
+                                target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="menu-item"><a href="mailto:pablosarturi1@gmail.com"><i
+                                    class="fa-solid fa-envelope"></i></a></li>
+                        <li class="menu-item"><a href="https://www.instagram.com/pablo_sarturi/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </section>
             </div>
         </div>
     </header>
-    <section id="about-me" class="section-container">
-        <h1 class="section-title">About Me</h1>
-        <div class="win95-box">
-            <section class="win95-bar">
-                <div>
-                    <!-- <img src="assets/icon-mycomputer.png"> -->
-                    <p class="win95-title">About me</p>
-                </div>
-                <div>
-                    <button class="win95-btn">_</button>
-                    <button class="win95-btn">X</button>
-                </div>
-            </section>
-            <section class="win95-content">
-                <figure class="win95-photo">
-                    <img src="assets/me.jpg" alt="A picture of myself">
-                    <figcaption>Yup, that's me (circa 2019)</figcaption>
-                </figure>
-                <span class="win95-text" style="padding-left: 0px;">
-                    <h2>Who am I?</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ex corporis dicta ducimus dolore. Quia temporibus reprehenderit laudantium illum rerum cum inventore, atque fugit ipsum dolore doloribus dignissimos, odit velit.
-                    </p>
-                </span>
-            </section>
-        </div>
-    </section>
-    <section id="story" class="section-container">
-        <h1 class="section-title">My Story</h1>
-        <div class="win95-box">
-            <section class="win95-bar">
-                <div>
-                    <!-- <img src="assets/icon-mycomputer.png"> -->
-                    <p class="win95-title">Experiences</p>
-                </div>
-                <div>
-                    <button class="win95-btn">_</button>
-                    <button class="win95-btn">X</button>
-                </div>
-            </section>
-            <section class="story">
-                <section class="year">
-                    <h1>2020</h1>
+    <section id="main">
+        <nav id="mySidenav" class="sidenav">
+            <a href="#">About Me</a>
+            <a href="#">My Story</a>
+            <a href="#">Projects</a>
+        </nav>
+        <section id="about-me" class="section-container">
+            <h1 class="section-title">About Me</h1>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">About me</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
                 </section>
-                <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
-                <span class="pipe">|</span> -->
-                <span class="story-text">
-                    <h2>Lógica Informática</h2>
-                    <h3>2020 - Now</h3>
-                </span>
-            </section>
-            <section class="win95-text">
-
-            </section>
-        </div>
-        <div class="win95-box">
-            <section class="win95-bar">
-                <div>
-                    <!-- <img src="assets/icon-mycomputer.png"> -->
-                    <p class="win95-title">Experiences</p>
-                </div>
-                <div>
-                    <button class="win95-btn">_</button>
-                    <button class="win95-btn">X</button>
-                </div>
-            </section>
-            <section class="experience">
-                <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
-                <span class="pipe">|</span>
-                <span class="experience-text">
-                    <h2>Lógica Informática</h2>
-                    <h3>2020 - Now</h3>
-                </span>
-            </section>
-            <section class="win95-text">
-
-            </section>
-        </div>
+                <section class="win95-content">
+                    <figure class="win95-photo">
+                        <img src="assets/me.jpg" alt="A picture of myself">
+                        <figcaption>Yup, that's me (circa 2019)</figcaption>
+                    </figure>
+                    <span class="win95-text" style="padding-left: 0px;">
+                        <h2>Who am I?</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ex corporis dicta ducimus
+                            dolore. Quia temporibus reprehenderit laudantium illum rerum cum inventore, atque fugit
+                            ipsum dolore doloribus dignissimos, odit velit.
+                        </p>
+                    </span>
+                </section>
+            </div>
+        </section>
+        <section id="story" class="section-container">
+            <h1 class="section-title">My Story</h1>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">Life</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
+                </section>
+                <section class="story">
+                    <section class="year">
+                        <h1>2000</h1>
+                    </section>
+                    <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                    <span class="pipe">|</span> -->
+                    <span class="story-text">
+                        <p>I was born at the 30th of March of 2000</p>
+                    </span>
+                </section>
+            </div>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">Life</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
+                </section>
+                <section class="story">
+                    <section class="year">
+                        <h1>2016</h1>
+                    </section>
+                    <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                    <span class="pipe">|</span> -->
+                    <span class="story-text">
+                        <p>IFF</p>
+                    </span>
+                </section>
+            </div>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">Life</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
+                </section>
+                <section class="story">
+                    <section class="year">
+                        <h1>2016</h1>
+                    </section>
+                    <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                    <span class="pipe">|</span> -->
+                    <span class="story-text">
+                        <p>Italy</p>
+                    </span>
+                </section>
+            </div>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">Life</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
+                </section>
+                <section class="story">
+                    <section class="year">
+                        <h1>2019</h1>
+                    </section>
+                    <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                    <span class="pipe">|</span> -->
+                    <span class="story-text">
+                        <p>Iff</p>
+                    </span>
+                </section>
+            </div>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">Life</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
+                </section>
+                <section class="story">
+                    <section class="year">
+                        <h1>2020</h1>
+                    </section>
+                    <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                    <span class="pipe">|</span> -->
+                    <span class="story-text">
+                        <p>IUTOMACAO</p>
+                    </span>
+                </section>
+            </div>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">Life</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
+                </section>
+                <section class="story">
+                    <section class="year">
+                        <h1>2020</h1>
+                    </section>
+                    <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                    <span class="pipe">|</span> -->
+                    <span class="story-text">
+                        <p>LÓGICA</p>
+                    </span>
+                </section>
+            </div>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">Life</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
+                </section>
+                <section class="story">
+                    <section class="year">
+                        <h1>2023</h1>
+                    </section>
+                    <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                    <span class="pipe">|</span> -->
+                    <span class="story-text">
+                        <p>C#</p>
+                    </span>
+                </section>
+            </div>
+            <div class="win95-box">
+                <section class="win95-bar">
+                    <div>
+                        <!-- <img src="assets/icon-mycomputer.png"> -->
+                        <p class="win95-title">Life</p>
+                    </div>
+                    <div>
+                        <button class="win95-btn">_</button>
+                        <button class="win95-btn">X</button>
+                    </div>
+                </section>
+                <section class="story">
+                    <section class="year">
+                        <h1>2024</h1>
+                    </section>
+                    <!-- <img class="experience-company-photo" src="assets/logo-logica.png" alt="The logo of Lógica">
+                    <span class="pipe">|</span> -->
+                    <span class="story-text">
+                        <p>cC</p>
+                    </span>
+                </section>
+            </div>
+        </section>
+        <section id="projects" class="section-container">
+            <h1 class="section-title">Projects</h1>
+        </section>
     </section>
-    <section id="academics" class="section-container">
-        <h1 class="section-title">Teste</h1>
-    </section>
-    <section id="projects" class="section-container">
-        <h1 class="section-title">Teste</h1>
-    </section>
-    <section id="contact" class="section-container">
-        <h1 class="section-title">Teste</h1>
-    </section>
-    <footer>
-
+    <footer class="footer-container">
+        <a href="#header" class="win95-btn-start">
+            <button class="win95-btn">Start</button>
+        </a>
+        <h3>Looks like u have reached the end! Thank you so much to learn a bit more about me! :) Click <a
+                href="#header">here<a> if u want to go back to the top</h3>
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/e075535f67.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
