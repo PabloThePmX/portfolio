@@ -119,10 +119,11 @@ body{
 .section-container{
     /* border: 1px rgb(226, 55, 198) solid; */
     display: flex;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 15px;
 }
 
 /*Windows, a lot of the css is from https://codepen.io/supember/pen/BKmgNZ*/
@@ -235,7 +236,7 @@ body{
     font-size: 3em;
 }
 
-.experience{
+.story{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,7 +250,7 @@ body{
     font-size: 5em;
 }
 
-.experience-text{
+.story-text{
     font-family: sans-serif;
     color: black;
     font-size: 1.5em;
@@ -260,4 +261,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.year{
+    border-right: 1px black solid;
+    padding: 10px;
 }
