@@ -23,26 +23,33 @@ function typeWriter() {
 // };
 
 // https://stackoverflow.com/questions/34372106/check-if-an-element-is-visible-on-screen
-function isVisible(domElement) {
-    return new Promise(resolve => {
-      const o = new IntersectionObserver(([entry]) => {
-        resolve(entry.intersectionRatio === 1);
-        o.disconnect();
-      });
-      o.observe(domElement);
-    });
-}
+// function isVisible(domElement) {
+//     return new Promise(resolve => {
+//       const o = new IntersectionObserver(([entry]) => {
+//         resolve(entry.intersectionRatio === 1);
+//         o.disconnect();
+//       });
+//       o.observe(domElement);
+//     });
+// }
 
-// https://stackoverflow.com/questions/49432579/await-is-only-valid-in-async-function
-async function verifyElement(){
-    const visible = await isVisible(document.querySelector('#main'));
-    console.log(visible);
-}
+// // https://stackoverflow.com/questions/49432579/await-is-only-valid-in-async-function
+// async function verifyElement(){
+//     const visible = await isVisible(document.querySelector('#main'));
+//     console.log(visible);
+// }
 
+const options = {
+    root: document.querySelector("#main"),
+    rootMargin: "0px",
+    threshold: 1.0,
+};
+  
 
 window.onload = function() {
     typeWriter();
-    isVisible();
+    const observer = new IntersectionObserver(callback, options);
+    console.log(observer);
 };
 
 //go to the header when the page is reloaded
