@@ -10,46 +10,60 @@ function typeWriter() {
     }
 }
 
-// var prevScrollpos = window.scrollY;
-// window.onscroll = function() {
-//   var currentScrollPos = window.scrollY;
-//   var nav = document.getElementById("mySidenav");
-//   if (prevScrollpos > currentScrollPos) {
-//     // nav.style.display = "none";
-//   } else {
-//     nav.style.display = "block";
-//   }
-//   prevScrollpos = currentScrollPos;
-// };
+let slideIndex = 1;
+showSlides(slideIndex);
 
-// https://stackoverflow.com/questions/34372106/check-if-an-element-is-visible-on-screen
-// function isVisible(domElement) {
-//     return new Promise(resolve => {
-//       const o = new IntersectionObserver(([entry]) => {
-//         resolve(entry.intersectionRatio === 1);
-//         o.disconnect();
-//       });
-//       o.observe(domElement);
-//     });
-// }
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-// // https://stackoverflow.com/questions/49432579/await-is-only-valid-in-async-function
-// async function verifyElement(){
-//     const visible = await isVisible(document.querySelector('#main'));
-//     console.log(visible);
-// }
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-const options = {
-    root: document.querySelector("#main"),
-    rootMargin: "0px",
-    threshold: 1.0,
-};
-  
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+function setTime(){
+    let today = new Date();
+    let timeHours = 0;
+    let timeMinutes= 0;
+    // var time = today.getHours() + ":" + today.getMinutes();
+    if(today.getHours() < 10){
+        timeHours = "0" + today.getHours();
+    } else{
+        timeHours = today.getHours()
+    }
+    if(today.getMinutes() < 10){
+        timeMinutes = "0" + today.getMinutes();
+    } else{
+        timeMinutes = today.getMinutes();
+    }
+    var time = timeHours + ":" + timeMinutes;
+    let timeContainer = document.getElementById("hour");
+    timeContainer.innerHTML = time;
+
+    setInterval(setTime, 1500);
+}
 
 window.onload = function() {
     typeWriter();
-    const observer = new IntersectionObserver(callback, options);
-    console.log(observer);
+    setTime();
 };
 
 //go to the header when the page is reloaded
