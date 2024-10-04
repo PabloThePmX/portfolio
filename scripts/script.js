@@ -1,5 +1,5 @@
 let speed = 70;
-let txt = `Hey! I'm Pablo!`;
+let txt = `Hey! I'm Pablo! :)`;
 let i = 0;
 
 function typeWriter() {
