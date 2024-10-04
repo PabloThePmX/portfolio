@@ -3,10 +3,15 @@ let txt = `Hey! I'm Pablo!`;
 let i = 0;
 
 function typeWriter() {
+    if(i == 0){
+      document.getElementById("typing-intro").innerHTML = "";
+    }
     if (i < txt.length) {
         document.getElementById("typing-intro").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
+    } else{
+      i = 0;
     }
 }
 
@@ -58,7 +63,7 @@ function setTime(){
     let timeContainer = document.getElementById("hour");
     timeContainer.innerHTML = time;
 
-    setInterval(setTime, 1500);
+    setInterval(setTime, 10000);
 }
 
 window.onload = function() {

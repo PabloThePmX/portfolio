@@ -1,45 +1,42 @@
-// https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+//https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 
-const numSteps = 20.0;
+document.addEventListener("DOMContentLoaded", () => {
+  //get the elements
+  const boxElement = document.querySelector("#main");
+  const storyCards = document.querySelectorAll('.fade-in-section');
+  const aboutMe = document.querySelector("#about-me-card");
+  const projects = document.querySelector("#projects-card");
+ 
 
-let boxElement;
-let prevRatio = 0.0;
-
-
-// Set things up
-window.addEventListener(
-  "load",
-  (event) => {
-    boxElement = document.querySelector("#main");
-    createObserver();
-  },
-  false
-);
-
-function createObserver() {
-    let observer;
-  
-    let options = {
-      root: null,
-      rootMargin: "0px",
-      //40% need to appear
-      threshold: 0.2,
-    };
-  
-    observer = new IntersectionObserver(handleIntersect, options);
-    observer.observe(boxElement);
-}
-
-function handleIntersect(entries, observer) {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio > prevRatio) {
-        document.getElementById("mySidenav").style.visibility = "visible";
-        document.getElementById("mySidenav").style.opacity = 1;
+  //verify the observer
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      //if the main part is visible, put visibility and opacity, or take it off
+      if (entry.target === boxElement) {
+        document.getElementById("mySidenav").style.visibility = entry.isIntersecting ? "visible" : "hidden";
+        document.getElementById("mySidenav").style.opacity = entry.isIntersecting ? 1 : 0;
+      } else if (entry.target === aboutMe){
+        entry.target.classList.toggle('fade', entry.isIntersecting);
+      } else if (entry.target === projects){
+        entry.target.classList.toggle('fade', entry.isIntersecting);
       } else {
-        document.getElementById("mySidenav").style.visibility = "hidden";
-        document.getElementById("mySidenav").style.opacity = 0;
+        entry.target.classList.toggle('is-visible', entry.isIntersecting);
       }
-  
-      prevRatio = entry.intersectionRatio;
     });
-}
+  };
+
+  //observer definitions
+  const observer = new IntersectionObserver(observerCallback, 
+    { 
+      root: null, 
+      rootMargin: "0px", 
+      //20% of the element need to be on user screen
+      threshold: 0.2 
+    });
+  
+  observer.observe(boxElement);
+  //apply this for each card
+  storyCards.forEach(storyCard => observer.observe(storyCard));
+  observer.observe(aboutMe);
+  observer.observe(projects);
+});
