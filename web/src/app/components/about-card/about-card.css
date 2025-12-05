@@ -1,0 +1,153 @@
+@media only screen and (max-width: 768px) {
+    .win95-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .win95-photo {
+        width: 100%;
+    }
+
+    .win95-text {
+        width: 100%;
+        padding: 10px !important;
+    }
+
+    /* TODO */
+    .win95-text > h2, .win95-text p {
+        text-align: center !important;   
+    }
+
+    .win95-box{
+        min-width: 80%;
+    }
+
+
+    .story-text{
+        font-size: 0.95em !important;
+        margin: 15px !important;
+    }
+
+    .text-caption{
+        position: relative !important;
+        opacity: 100% !important;
+    }
+
+    /* .win95-btn-side{
+        max-width: 10px;
+    } */
+}
+
+
+/*Windows, a lot of the css is from https://codepen.io/supember/pen/BKmgNZ*/
+.win95-box{
+    width: 60%;
+    background:#C0C0C0;
+    border-width:1px;
+    border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    border-style:solid;
+    text-align: justify;
+    /* font-family:"MS Sans Serif"; */
+
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+}
+
+.win95-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.win95-bar{
+    display: flex;
+    justify-content: space-between;
+    background:#000080;
+    height:30px;
+    width:100%;
+}
+
+.win95-bar div{
+    display: flex;
+}
+
+.win95-title {
+    padding-left: 5px;
+    margin: 0;
+    color:#FFF;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: .05em;
+}
+
+.win95-btn{
+    margin:2px 2px 2px 0;
+    float:right;
+    width:23px;
+    height:25px;
+    background:#C0C0C0;
+    border-width:1px;
+    border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    padding:0;
+    font-size:9px;
+    font-weight:bold;
+    font-family:Tahoma;
+    text-align:center;
+}
+
+.win95-text{
+    color: black;
+    padding: 30px;
+    font-size: 1.5em;
+}
+
+.win95-text > h2 {
+    text-align: left;
+}
+
+.win95-text > p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.win95-text ul{
+    list-style: none;
+    padding: 0;
+}
+
+.win95-photo {
+    /* center the text? idk it works */
+    text-align: center;
+}
+
+.win95-photo img {
+    border: 1px black solid;
+    width: 100%;
+    /*if needed, I can automatically change position (left. right, etc)*/
+    /* display: block; */
+    margin: 0px -10px 0px -10px;
+    padding: 10px;
+}
+
+.win95-photo figcaption {
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+    text-align: center;
+}
+
+.section-title{
+    font-size: 3em;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

@@ -1,1 +1,36 @@
-<p>header works!</p>
+<header id="header">
+    <nav class="top-header">
+        <a href="#about-me">About Me</a>
+        <a href="#story">My Story</a>
+        <a href="#projects">Projects</a>
+    </nav>
+    <div class="main-header">
+        <div class="intro-text">
+            <h2 id="typing-intro">{{typingValue}}</h2>
+            <section class="icons">
+                <ul class="menu-list">
+                    <li class="menu-item zoom">
+                        <a href="https://github.com/PabloThePmX" target="_blank">
+                            <fa-icon [icon]="faGithub"></fa-icon>
+                        </a>
+                    </li>
+                    <li class="menu-item zoom">
+                        <a href="https://www.linkedin.com/in/pablo-sarturi/?locale=en_US" target="_blank">
+                            <fa-icon [icon]="faLinkedin"></fa-icon>
+                        </a>
+                    </li>
+                    <li class="menu-item zoom">
+                        <a href="mailto:pablosarturi1@gmail.com">
+                            <fa-icon [icon]="faMail"></fa-icon>
+                        </a>
+                    </li>
+                    <li class="menu-item zoom">
+                        <a href="https://www.instagram.com/pablo_sarturi/" target="_blank">
+                            <fa-icon [icon]="faInstagram"></fa-icon>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</header>

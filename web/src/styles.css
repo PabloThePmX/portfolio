@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+/* .section-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+} */
+@font-face { font-family: "Font-Windows"; src: url("../public/assets/windows-regular.ttf"); } 
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    /* background-color: #818181; */
+    color: #fdffff;
+    font-family: "Font-Windows", "MS Sans Serif";
+    width: 100%;
+    height: 100%;
+    background-color: #018281;
+    /* https://www.cursor.cc/?action=icon&file_id=56731 */
+    cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAP//AP///wAA/wAAAAD/AP8rAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAAIAACIAAAAAAAAAAAAAAAACIAAiAAAAAAAAAAAAAAAAAiICIAAAAAVVUAUAABAAAAIiIiAAAAUFBVAFUAEQAAACIiIiIiAFAAAABVABEAAAAiIiIiIAAAREQABQAQAAAAIiIiIgAAQEBEAAAAAAAAACIiIiAAAEAAAABAAAMAAAAiIiIAAAAAAAAARAAzAAAAIiIgAAAAAAAAAEQAMwAAACIiAAAAAAAAAAAEADAAAAAiIAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////////////////////n////w///88Pg/3GHqDxwh74AcA/gAHAAqABwAL4AcAHgAHADqABwB74AcA/gAHAfqABwP74AcH//APD//8Px////8/////f////w=='), auto;
+}
+
+p:hover, a:hover, h1:hover, h2:hover, figcaption:hover{
+    cursor: text;
+}
+
+button:hover, ul a:hover, nav a:hover, h3 a:hover{
+    /* http://www.rw-designer.com/cursor-detail/151740 */
+    cursor: url("../public/assets/Cursor_15.cur"), auto;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    border: 3px outset #fff;
+    -webkit-border-shadow: 2px 2px #000;
+    height: 40px;
+    background-color: #C0C0C0
+}

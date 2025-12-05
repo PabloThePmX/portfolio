@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-win95-box',
@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './win95-box.css'
 })
 export class Win95Box {
-
+  title = input<string>();
+  year = input<string>();
+  text = input<string>();
 }
