@@ -1,19 +1,24 @@
 import { Component, signal } from '@angular/core';
 import { Header } from "./components/header/header";
 import { AboutCard } from "./components/about-card/about-card";
+import { Win95Box } from "./components/win95-box/win95-box";
+import { STORIES } from './constants/stories.constants';
+import { ProjectsCard } from "./components/projects-card/projects-card";
+import { Footer } from "./components/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, AboutCard],
+  imports: [Header, AboutCard, Win95Box, ProjectsCard, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('portfolio');
+  stories = STORIES;
 
   constructor() {
     document.addEventListener("DOMContentLoaded", () => {
-      
+
       //get the elements
       const storyCards: any = document.querySelectorAll('.fade-in-section');
       const aboutMe: any = document.querySelector("#about-me-card");

@@ -1,15 +1,26 @@
-<!-- <section id="story" class="section-container">
-  <app-win95-box title="oi" 
-  text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum officiis omnis soluta consectetur similique laborum officia tempore placeat repellat excepturi, at atque praesentium ea necessitatibus corrupti, maiores dolorem natus asperiores?" 
-  year="2020"></app-win95-box>
-</section> -->
-<!-- <router-outlet></router-outlet> -->
-
-<app-header></app-header>
+<app-header/>
 <main>
-  <app-about-card id="about-me" class="section-container"></app-about-card>
+    <section id="about-me" class="section-container">
+      <h1 class="section-title">About Me</h1>
+      <app-about-card/>
+    </section>
+
+    <!-- CHECK BOLDS -->
+    <section id="story" class="section-container">
+      <h1 class="section-title">My Story</h1>
+      @for (story of stories; track $index) {
+        <app-win95-box  
+          title={{story.title}} 
+          year={{story.year}} 
+          text={{story.text}}>
+        </app-win95-box>
+      }
+    </section>
+
+    <section id="projects" class="section-container">
+      <h1 class="section-title">Projects</h1>
+      <app-projects-card/>
+    </section>
+
+    <app-footer/>
 </main>
-
-
-<!-- talvez isso deveria ir la no angular.json, verificar -->
-<script src="./observer.js"></script>

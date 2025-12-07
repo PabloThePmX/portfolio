@@ -1,0 +1,104 @@
+@media only screen and (max-width: 768px) {
+    .win95-box{
+        min-width: 80%;
+    }
+    .text-caption{
+        position: relative !important;
+        opacity: 100% !important;
+    }
+}
+
+/*Windows, a lot of the css is from https://codepen.io/supember/pen/BKmgNZ*/
+.win95-box{
+    width: 60%;
+    background:#C0C0C0;
+    border-width:1px;
+    border-color:#FFFFFF #808080 #808080 #FFFFFF;
+    border-style:solid;
+    text-align: justify;
+    /* font-family:"MS Sans Serif"; */
+
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+}
+
+.slideshow-container {
+    max-width: 100%;
+    /* display: flex; */
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fdffff;
+    background-color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: black;
+}
+
+.text-caption {
+    color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: #fdffff;
+    opacity: 85%;
+}

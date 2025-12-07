@@ -1,1 +1,29 @@
-<p>projects-card works!</p>
+<div class="win95-box" id="projects-card">
+    <div class="slideshow-container">
+        
+        <!-- TODO: USE ANGULAR ANIMATIONS -->
+
+        <div class="fade">
+            <div class="numbertext">{{projectIndex + 1}} / {{projects.length}}</div>
+            <img [src]="currentProject.image" style="width:100%">
+            <div class="text-caption">
+                <p style="margin: 0px;" [innerHTML]="currentProject.caption"></p>
+            </div>
+        </div>
+    
+        <a class="prev" (click)="previousSlide()">&#10094;</a>
+        <a class="next" (click)="nextSlide()">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center;padding:10px">
+        @for (project of projects; track $index) {
+            <span
+                class="dot"
+                [class.active]="$index === projectIndex"
+                (click)="jumpToSlide($index)">
+            </span>
+        }
+    </div>
+</div>
