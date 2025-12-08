@@ -14,14 +14,21 @@ export class ProjectsCard {
   projectIndex: number = 0;
   currentProject = PROJECTS[0];
   projects = PROJECTS;
+  isFading = false;
+  
+  triggerFading(){
+    this.isFading = false;
+    setTimeout(() => this.isFading = true);
+  }
 
   nextSlide(){
     if(this.projectIndex < this.projects.length - 1)
       this.projectIndex++;
     else
       this.projectIndex = 0
-
+    
     this.currentProject = this.projects[this.projectIndex];
+    this.triggerFading();
   }
 
   previousSlide(){
@@ -31,10 +38,12 @@ export class ProjectsCard {
       this.projectIndex = PROJECTS.length - 1
 
     this.currentProject = this.projects[this.projectIndex];
+    this.triggerFading();
   }
 
   jumpToSlide(slideIndex: number){
     this.projectIndex = slideIndex;
     this.currentProject = this.projects[this.projectIndex];
+    this.triggerFading();
   }
 }

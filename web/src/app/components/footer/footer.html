@@ -1,7 +1,6 @@
 <footer class="footer-container">
     <a href="#header">
-        <!-- onclick signal -->
-        <button class="win95-btn win95-btn-start" onclick="typeWriter(0)"><img src="assets/icon-windows.png" alt="">Start</button>
+        <button class="win95-btn win95-btn-start" (click)="clickedEvent.emit()"><img src="assets/icon-windows.png" alt="">Start</button>
     </a>
     <section id="hour">{{currentTime}}</section>
 </footer>

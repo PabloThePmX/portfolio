@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Footer {
   currentTime: string = "";
+  clickedEvent = output();
 
   ngOnInit(){
     this.setTime();

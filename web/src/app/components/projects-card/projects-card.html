@@ -1,9 +1,7 @@
 <div class="win95-box" id="projects-card">
     <div class="slideshow-container">
-        
-        <!-- TODO: USE ANGULAR ANIMATIONS -->
 
-        <div class="fade">
+        <div [class.fade]="isFading">
             <div class="numbertext">{{projectIndex + 1}} / {{projects.length}}</div>
             <img [src]="currentProject.image" style="width:100%">
             <div class="text-caption">

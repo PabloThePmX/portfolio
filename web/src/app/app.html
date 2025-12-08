@@ -1,18 +1,18 @@
-<app-header/>
+<app-header [reloadTypeWriter]="clicked" (resetClicked)="clicked = false"/>
 <main>
     <section id="about-me" class="section-container">
       <h1 class="section-title">About Me</h1>
-      <app-about-card/>
+      <app-about-card />
     </section>
 
-    <!-- CHECK BOLDS -->
     <section id="story" class="section-container">
       <h1 class="section-title">My Story</h1>
       @for (story of stories; track $index) {
         <app-win95-box  
           title={{story.title}} 
           year={{story.year}} 
-          text={{story.text}}>
+          text={{story.text}}
+          class="fade-in-section">
         </app-win95-box>
       }
     </section>
@@ -21,6 +21,5 @@
       <h1 class="section-title">Projects</h1>
       <app-projects-card/>
     </section>
-
-    <app-footer/>
 </main>
+<app-footer (clickedEvent)="clicked = true"/>

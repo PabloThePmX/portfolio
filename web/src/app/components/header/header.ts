@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, output, signal, SimpleChanges } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -14,6 +14,8 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 export class Header {
   typingValue: string = "";
   private _typingCounter: number = 0;
+  reloadTypeWriter = input(false);
+  resetClicked = output();
 
   faLinkedin = faLinkedin;
   faInstagram = faInstagram;
@@ -22,6 +24,13 @@ export class Header {
 
   ngOnInit(){
     this.typeWriter();
+  }
+
+  ngOnChanges() {
+    if(this.reloadTypeWriter()){
+      this.typeWriter();
+      this.resetClicked.emit();
+    }
   }
 
   typeWriter(): void {

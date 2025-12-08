@@ -103,6 +103,14 @@
     transition: transform .2s;
 }
 
+.zoom-story:hover {
+    transform: scale(1.1);
+}
+
+.zoom > a > i:hover{
+    color: #fdffff;
+}
+
 /* thanks bro https://dev.to/selbekk/how-to-fade-in-content-as-it-scrolls-into-view-10j4 */
 .fade-in-section {
     opacity: 0;
@@ -119,4 +127,15 @@
     opacity: 1;
     transform: translateY(0);
     transform: scale(1.1);
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
