@@ -61,4 +61,9 @@ export class App {
       observer.observe(projects as Element);
     });
   }
+
+  //the clicked = false needs to happen on another cycle, not the same
+  onResetClicked(){
+    queueMicrotask(() => this.clicked = false)
+  }
 }
